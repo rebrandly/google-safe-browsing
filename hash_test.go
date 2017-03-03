@@ -23,7 +23,7 @@ import (
 	"runtime"
 	"testing"
 
-	pb "github.com/google/safebrowsing/internal/safebrowsing_proto"
+	pb "github.com/rebrandly/google-safe-browsing/internal/safebrowsing_proto"
 
 	"github.com/golang/protobuf/proto"
 )
