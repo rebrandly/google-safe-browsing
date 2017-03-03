@@ -88,7 +88,7 @@ const (
 
 	// DefaultUpdatePeriod is the default period for how often SafeBrowser will
 	// reload its blacklist database.
-	DefaultUpdatePeriod = 30 * time.Minute
+	DefaultUpdatePeriod = 2 * time.Minute
 
 	// DefaultID and DefaultVersion are the default client ID and Version
 	// strings to send with every API call.
