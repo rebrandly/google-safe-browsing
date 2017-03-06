@@ -92,7 +92,7 @@ const (
 
 	// DefaultID and DefaultVersion are the default client ID and Version
 	// strings to send with every API call.
-	DefaultID      = "GoSafeBrowser"
+	DefaultID      = "rebrandly"
 	DefaultVersion = "1.0.0"
 )
 
