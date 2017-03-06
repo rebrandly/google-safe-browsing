@@ -458,6 +458,8 @@ func (sb *SafeBrowser) LookupURLs(urls []string) (threats [][]URLThreat, err err
 
 		/* ^ ---------Skip api call--------- ^ */
 
+		/* Old code for API request:find
+
 		// Actually query the Safe Browsing API for exact full hash matches.
 		resp, err := sb.api.HashLookup(req)
 		if err != nil {
@@ -491,6 +493,8 @@ func (sb *SafeBrowser) LookupURLs(urls []string) (threats [][]URLThreat, err err
 			}
 		}
 		atomic.AddInt64(&sb.stats.QueriesByAPI, 1)
+
+		*/
 	}
 	return threats, nil
 }
