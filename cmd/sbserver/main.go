@@ -158,7 +158,8 @@
 //	    "Stats" : {
 //	        "QueriesByDatabase" : 132,
 //	        "QueriesByCache" : 31,
-//	        "QueriesByAPI" : 6,
+//	        "QueriesByAPI" : 0,
+//			"QueriesByAPIAvoided: 6"
 //	        "QueriesFail" : 0,
 //	    },
 //	    "Error" : ""
