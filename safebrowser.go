@@ -448,6 +448,14 @@ func (sb *SafeBrowser) LookupURLs(urls []string) (threats [][]URLThreat, err err
 			continue
 		}
 
+		/* v ---------Skip api call--------- v */
+
+		//QueriesByAPI became the number of skipped api calls
+		atomic.AddInt64(&sb.stats.QueriesByAPI, 1)
+		return threats, nil
+
+		/* ^ ---------Skip api call--------- ^ */
+
 		// Actually query the Safe Browsing API for exact full hash matches.
 		resp, err := sb.api.HashLookup(req)
 		if err != nil {
