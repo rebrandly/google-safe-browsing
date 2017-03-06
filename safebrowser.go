@@ -270,7 +270,7 @@ type Stats struct {
 	QueriesByDatabase int64 // Number of queries satisfied by the database alone
 	QueriesByCache    int64 // Number of queries satisfied by the cache alone
 	QueriesByAPI      int64 // Number of queries satisfied by an API call
-	QueriesByAPIAvoided      int64 // Number of queries satisfied by an API call
+	QueriesByAPISkipped      int64 // Number of queries satisfied by an API call
 	QueriesFail       int64 // Number of queries that could not be satisfied
 }
 
@@ -337,7 +337,7 @@ func (sb *SafeBrowser) Status() (Stats, error) {
 		QueriesByDatabase: atomic.LoadInt64(&sb.stats.QueriesByDatabase),
 		QueriesByCache:    atomic.LoadInt64(&sb.stats.QueriesByCache),
 		QueriesByAPI:      atomic.LoadInt64(&sb.stats.QueriesByAPI),
-		QueriesByAPIAvoided:      atomic.LoadInt64(&sb.stats.QueriesByAPIAvoided),
+		QueriesByAPISkipped:      atomic.LoadInt64(&sb.stats.QueriesByAPISkipped),
 		QueriesFail:       atomic.LoadInt64(&sb.stats.QueriesFail),
 	}
 	return stats, sb.db.Status()
@@ -453,7 +453,7 @@ func (sb *SafeBrowser) LookupURLs(urls []string) (threats [][]URLThreat, err err
 		/* v ---------Skip api call--------- v */
 
 		//QueriesByAPI became the number of skipped api calls -> states as a good url
-		atomic.AddInt64(&sb.stats.QueriesByAPIAvoided, 1)
+		atomic.AddInt64(&sb.stats.QueriesByAPISkipped, 1)
 		continue
 
 		/* ^ ---------Skip api call--------- ^ */

@@ -159,7 +159,7 @@
 //	        "QueriesByDatabase" : 132,
 //	        "QueriesByCache" : 31,
 //	        "QueriesByAPI" : 0,
-//			"QueriesByAPIAvoided: 6"
+//			"QueriesByAPISkipped: 6"
 //	        "QueriesFail" : 0,
 //	    },
 //	    "Error" : ""
