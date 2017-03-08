@@ -4,7 +4,7 @@ RUN apk update && \
     apk upgrade && \
     apk add git
 
-RUN go get github.com/rebrandly/google-safe-browsing/cmd/sbserver
+RUN go get github.com/google/safebrowsing/cmd/sbserver
 RUN export PATH=$PATH:$GOPATH/bin
 RUN mkdir /google-safebrowsing
 RUN touch /google-safebrowsing/db
