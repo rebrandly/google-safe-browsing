@@ -80,21 +80,21 @@
 //
 // Example usage:
 //	# Send request to server:
-//	$ curl \
-//	  -H "Content-Type: application/json" \
-//	  -X POST -d '{
-//	      "threatInfo": {
-//	          "threatTypes":      ["UNWANTED_SOFTWARE", "MALWARE"],
-//	          "platformTypes":    ["ANY_PLATFORM"],
-//	          "threatEntryTypes": ["URL"],
-//	          "threatEntries": [
-//	              {"url": "google.com"},
-//	              {"url": "bad1url.org"},
-//	              {"url": "bad2url.org"}
-//	          ]
-//	      }
-//	  }' \
-//	  localhost:8080/v4/threatMatches:find
+	// $ curl \
+	//   -H "Content-Type: application/json" \
+	//   -X POST -d '{
+	//       "threatInfo": {
+	//           "threatTypes":      ["UNWANTED_SOFTWARE", "MALWARE"],
+	//           "platformTypes":    ["ANY_PLATFORM"],
+	//           "threatEntryTypes": ["URL"],
+	//           "threatEntries": [
+	//               {"url": "google.com"},
+	//               {"url": "bad1url.org"},
+	//               {"url": "bad2url.org"}
+	//           ]
+	//       }
+	//   }' \
+	//   localhost:8080/v4/threatMatches:find
 //
 //	# Receive response from server:
 //	{
